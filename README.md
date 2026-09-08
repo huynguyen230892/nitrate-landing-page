@@ -81,8 +81,14 @@ so the copy was corrected to match the shipping app rather than shipped as desig
   interstitials for non-members with a UMP consent form, and that is now described in
   Privacy and Terms. Mac and Apple TV genuinely show no ads, so that line survives.
 - **Restorations reframed** — the design claimed the scans and restorations as our own
-  work. Films are hosted and streamed by the Internet Archive; what is ours is the apps
-  and the curation. Terms says so.
+  work. We claim no copyright in the films; what is ours is the apps and the curation.
+  Terms says so.
+- **Delivery is never described** — the site says nothing about where films are hosted or
+  who serves them. The catalog copy leads on licence and cost instead: every title is
+  public domain or freely licensed, and nothing is paywalled. Keep it that way in any
+  rewrite. The one exception is the "Film delivery" row in `privacy.html#third-parties`,
+  which discloses that streaming sends the viewer's IP to third-party servers — that is a
+  data disclosure, not a description of the host, and it names no one.
 - **Subscription documented** — The Nitrate Society is covered in `terms.html#membership`
   with the auto-renewal disclosures Apple requires, and in `privacy.html#membership`.
 - **Film count softened** — "Thousands of films" became no number at all, per the
