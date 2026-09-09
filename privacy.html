@@ -44,7 +44,7 @@
 <main id="main" class="page">
 
   <div class="page__head">
-    <p class="meta">Effective <time datetime="2026-09-08">September 8, 2026</time></p>
+    <p class="meta">Effective <time datetime="2026-09-09">September 9, 2026</time></p>
     <h1>Privacy Policy</h1>
     <p class="lead">
       Nitrate is a film-viewing app, not an advertising business. There is no Nitrate
@@ -64,6 +64,7 @@
           <li><a href="#never">What we don't</a></li>
           <li><a href="#use">How it's used</a></li>
           <li><a href="#sync">Sync across devices</a></li>
+          <li><a href="#analytics">Analytics</a></li>
           <li><a href="#ads">Advertising</a></li>
           <li><a href="#membership">Membership &amp; payments</a></li>
           <li><a href="#third-parties">Third parties</a></li>
@@ -117,6 +118,16 @@
         </div>
 
         <div class="entry">
+          <h3>App usage</h3>
+          <p>
+            How the app itself is used — app opens, which screens are viewed, session
+            length, crashes — with your device model, OS and app version, a region
+            inferred from your IP address, and a random app-instance identifier. Handled
+            by Google Firebase; see <a href="#analytics">Analytics</a> below.
+          </p>
+        </div>
+
+        <div class="entry">
           <h3>Advertising data (iPhone and iPad only)</h3>
           <p>
             For viewers who are not members, one ad may play before a film starts, served
@@ -132,7 +143,8 @@
           <li>No account, no sign-up, no email address or password — there is nothing to sign in to</li>
           <li>Location data, contacts, photos, or microphone access</li>
           <li>Payment card numbers — billing runs through the App Store, never through us</li>
-          <li>No analytics or attribution SDK, and no cross-site tracking pixels</li>
+          <li>No cross-site tracking pixels, and no advertising or attribution profile built from your viewing</li>
+          <li>Which films you watch is not sent to our analytics — it stays on your device and in your iCloud</li>
           <li>No copy of your watch history on any server of ours — we have no way to look it up</li>
         </ul>
       </section>
@@ -141,13 +153,14 @@
         <h2>How it's used</h2>
         <p>
           Playback positions restore your place. Your watchlist and settings follow you
-          between devices. Membership status decides whether ads are shown. That is the
-          whole of it.
+          between devices. Membership status decides whether ads are shown. None of that
+          leaves your devices and your own iCloud.
         </p>
         <p>
           We do not sell or rent personal data, and we do not share it with data brokers.
-          We run no analytics of our own, so there is no aggregate profile of your viewing
-          anywhere in our systems.
+          The analytics we do run measure the app, not the viewer: they tell us which
+          screens are used and where the app crashes, in aggregate, and they are not
+          joined to your watchlist or your resume points.
         </p>
       </section>
 
@@ -168,6 +181,34 @@
         <p>
           The film catalog itself is delivered from a separate, read-only public database.
           Reading it sends no personal data and requires no iCloud account.
+        </p>
+      </section>
+
+      <section id="analytics">
+        <h2>Analytics</h2>
+        <p>
+          Nitrate uses Google Firebase to measure how the app is used and to find out when
+          it breaks. This runs on all four platforms — iPhone, iPad, Mac and Apple TV —
+          unlike the ads, which are iPhone and iPad only.
+        </p>
+        <p>
+          What it reports is the app's behaviour rather than yours: launches, which screens
+          are opened, how long a session lasts, and crashes, alongside device model,
+          operating system and app version, a coarse region inferred from your IP address,
+          and a randomly generated app-instance identifier. That identifier is not your
+          name, your Apple Account, or anything we could resolve back to you.
+        </p>
+        <p>
+          <strong>Which films you watch is not part of it.</strong> Titles, your watchlist
+          and your resume points are not sent to Firebase; they stay on your device and in
+          your private iCloud storage, and that is still the only place they exist. We can
+          see that a screen was opened, not what was on it.
+        </p>
+        <p>
+          Google processes this data as our processor under
+          <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase's privacy terms</a>.
+          It is not used to build an advertising profile, and it is not joined to the ad
+          data described below.
         </p>
       </section>
 
@@ -216,7 +257,7 @@
       <section id="third-parties">
         <h2>Third parties</h2>
         <p>
-          Using Nitrate can send data to three places. There are no others.
+          Using Nitrate can send data to four places. There are no others.
         </p>
         <div class="table-wrap">
           <table class="table">
@@ -242,6 +283,14 @@
                   Ad delivery on iPhone and iPad for non-members only, as described above.
                 </td>
               </tr>
+              <tr>
+                <th scope="row">Google Firebase</th>
+                <td>
+                  Usage analytics and crash reporting, on all four platforms. Receives the
+                  app-usage data described under <a href="#analytics">Analytics</a>, and
+                  nothing about which films you watch.
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -256,10 +305,13 @@
           settings removes the synced copy from every device.
         </p>
         <p>
-          We hold no user database, so there is nothing for us to delete on your behalf and
-          no retention period to state. Crash reports reach us only through Apple's own
-          service, in aggregate and without identifying you, and only if you have chosen to
-          share analytics with developers in iOS or macOS settings.
+          We still hold no account and no copy of your library. The one dataset we do have
+          is the Firebase analytics described above, which Google retains on our behalf for
+          a limited period and then deletes; because it is keyed to an app-instance
+          identifier rather than to you, reinstalling the app starts a new one and orphans
+          the old. Crash reports also reach us through Apple's own service, in aggregate and
+          without identifying you, and only if you have chosen to share analytics with
+          developers in iOS or macOS settings.
         </p>
       </section>
 
@@ -267,15 +319,17 @@
         <h2>Your rights</h2>
         <p>
           Depending on where you live, you may have rights to access, correct, export, or
-          erase personal data held about you, and to object to certain processing. In
-          Nitrate's case the practical answer is unusual but honest: we hold no personal
-          data about you to produce or erase. The data the app creates is already in your
-          possession, on your devices and in your own iCloud account, and you can inspect
-          or delete it without asking us.
+          erase personal data held about you, and to object to certain processing. Most of
+          what Nitrate creates is already in your possession — on your devices and in your
+          own iCloud account — where you can inspect or delete it without asking us, and
+          where we could not reach it if you did ask.
         </p>
         <p>
-          For advertising data, the controller is Google, and requests about it should go to
-          Google. For data held in iCloud or in your App Store purchase history, the
+          The exception is the analytics above. It is not tied to your identity, so we
+          usually cannot single out "your" records from an email address alone — but if you
+          send us the app-instance identifier, or simply ask us to stop, we will act on it.
+          For advertising data the controller is Google, and requests about it should go to
+          Google. For data held in iCloud or in your App Store purchase history the
           controller is Apple. We are glad to help you route a request to the right place —
           write to us at the address below.
         </p>
