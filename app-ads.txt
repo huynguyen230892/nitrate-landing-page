@@ -1,0 +1,5 @@
+# app-ads.txt - authorised sellers for the Nitrate iOS app.
+# Spec: https://iabtechlab.com/ads-txt/
+# Must stay at the root of the domain set as this app's marketing URL in
+# App Store Connect, or AdMob will not find it.
+google.com, pub-8489871809454617, DIRECT, f08c47fec0942fa0
