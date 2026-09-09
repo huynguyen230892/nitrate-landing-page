@@ -478,6 +478,16 @@ p {
   aspect-ratio: 2 / 3;
   border: 1px solid var(--line-default);
   border-radius: var(--radius-poster);
+  overflow: hidden;
+}
+
+/* The striped fill stays behind the artwork as its loading state, which is why the
+   image sits inside `.ph` rather than replacing it. */
+.poster__art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .poster__title {
