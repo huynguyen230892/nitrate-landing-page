@@ -177,36 +177,61 @@
 
     <div class="card-grid">
       <article class="platform-card">
-        <div class="platform-card__shot ph">
-          <p class="ph__label ph__label--bl">iPhone browse — placeholder screenshot</p>
-        </div>
+        <a class="platform-card__shot" href="#shot-ios" aria-label="View the iPhone screenshot full size">
+          <img src="assets/img/screens/ios-thumb.webp" alt="Nitrate browsing the catalog on iPhone"
+               width="800" height="556" loading="lazy" decoding="async">
+        </a>
         <h3>iPhone &amp; iPad</h3>
         <p>Full catalog, continue watching, and a scrubber built for long single-reel features.</p>
       </article>
 
       <article class="platform-card">
-        <div class="platform-card__shot ph">
-          <p class="ph__label ph__label--bl">Mac browse — placeholder screenshot</p>
-        </div>
+        <a class="platform-card__shot" href="#shot-mac" aria-label="View the Mac screenshot full size">
+          <img src="assets/img/screens/mac-thumb.webp" alt="Nitrate's library window on the Mac"
+               width="800" height="571" loading="lazy" decoding="async">
+        </a>
         <h3>Mac</h3>
         <p>A proper library window: sidebar, filters, and a search field that means it.</p>
       </article>
 
       <article class="platform-card">
-        <div class="platform-card__shot ph">
-          <p class="ph__label ph__label--bl">Apple TV home — placeholder screenshot</p>
+        <!-- No Apple TV capture yet. A stated "coming soon" rather than a dashed asset
+             slot: the slot says an image is missing, this says the app is real and the
+             picture is not here yet, which is the true thing to tell a visitor. -->
+        <div class="platform-card__shot ph platform-card__shot--soon">
+          <p class="shot-soon">Screenshot coming soon</p>
         </div>
         <h3>Apple TV</h3>
         <p>Lean-back shelves and a focus-driven hero — no clicking, no ads.</p>
       </article>
 
       <article class="platform-card">
-        <div class="platform-card__shot ph">
-          <p class="ph__label ph__label--bl">Handoff across devices — placeholder screenshot</p>
-        </div>
+        <a class="platform-card__shot" href="#shot-handoff" aria-label="View the cross-device screenshot full size">
+          <img src="assets/img/screens/handoff-thumb.webp" alt="The same film open on more than one device"
+               width="800" height="571" loading="lazy" decoding="async">
+        </a>
         <h3>Everywhere at once</h3>
-        <p>Pick up on the Mac exactly where you paused on the TV.</p>
+        <p>Pick up on the Mac exactly where you paused on the iPhone.</p>
       </article>
+    </div>
+
+    <!-- Full-size views. Hidden until their id is the URL fragment, so clicking a
+         thumbnail opens one with no JavaScript — the same anchor mechanism the rest of
+         the page already uses. Inside the section so opening one barely scrolls. -->
+    <div class="lightbox" id="shot-ios" role="dialog" aria-label="iPhone screenshot, full size">
+      <a class="lightbox__scrim" href="#platforms" aria-label="Close"></a>
+      <img src="assets/img/screens/ios.webp" alt="Nitrate browsing the catalog on iPhone" loading="lazy">
+      <a class="lightbox__close" href="#platforms" aria-label="Close">Close</a>
+    </div>
+    <div class="lightbox" id="shot-mac" role="dialog" aria-label="Mac screenshot, full size">
+      <a class="lightbox__scrim" href="#platforms" aria-label="Close"></a>
+      <img src="assets/img/screens/mac.webp" alt="Nitrate's library window on the Mac" loading="lazy">
+      <a class="lightbox__close" href="#platforms" aria-label="Close">Close</a>
+    </div>
+    <div class="lightbox" id="shot-handoff" role="dialog" aria-label="Cross-device screenshot, full size">
+      <a class="lightbox__scrim" href="#platforms" aria-label="Close"></a>
+      <img src="assets/img/screens/handoff.webp" alt="The same film open on more than one device" loading="lazy">
+      <a class="lightbox__close" href="#platforms" aria-label="Close">Close</a>
     </div>
   </section>
 

@@ -531,8 +531,99 @@ p {
 
 .platform-card__shot {
   aspect-ratio: 4 / 3;
-  border: 1px dashed var(--line-strong);
+  border: 1px solid var(--line-default);
   border-radius: var(--radius-block);
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.platform-card__shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+a.platform-card__shot:hover img {
+  transform: scale(1.02);
+}
+
+a.platform-card__shot:hover {
+  border-color: var(--line-strong);
+}
+
+/* The one card with no capture yet. Dashed, because unlike the others this really is
+   an empty slot — but labelled as a promise rather than as a missing asset. */
+.platform-card__shot--soon {
+  border-style: dashed;
+  border-color: var(--line-strong);
+  display: grid;
+  place-items: center;
+}
+
+.shot-soon {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* --- Full-size screenshot views ------------------------------------------
+   Opened by the URL fragment, closed by pointing it elsewhere. No JavaScript: the
+   handoff calls for anchor scrolling and nothing more, and `:target` is that same
+   mechanism. */
+
+.lightbox {
+  display: none;
+}
+
+.lightbox:target {
+  display: grid;
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  place-items: center;
+  padding: clamp(16px, 4vw, 56px);
+  background: rgba(10, 11, 13, 0.92);
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border: 1px solid var(--line-default);
+  border-radius: var(--radius-block);
+}
+
+/* Fills the overlay behind the image, so a click anywhere off the picture closes it. */
+.lightbox__scrim {
+  position: absolute;
+  inset: 0;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: clamp(12px, 3vw, 28px);
+  right: clamp(12px, 3vw, 28px);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: var(--surface-raised);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-block);
+  padding: 8px 14px;
+}
+
+.lightbox__close:hover {
+  color: var(--text-primary);
+  border-color: var(--line-strong-hi);
 }
 
 .platform-card h3 {
