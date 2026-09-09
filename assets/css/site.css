@@ -468,10 +468,30 @@ p {
   gap: 18px;
 }
 
+/* The whole card is the link — same destination as the Download button, since a
+   visitor tapping a poster wants the film, and the film is in the app. */
 .poster {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: inherit;
+}
+
+.poster:hover {
+  color: inherit;
+}
+
+.poster:hover .poster__art {
+  border-color: var(--line-strong);
+}
+
+.poster:hover .poster__title {
+  color: var(--accent-hover);
+}
+
+.poster__art,
+.poster__title {
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
 .poster__art {
