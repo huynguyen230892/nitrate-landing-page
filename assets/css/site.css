@@ -366,33 +366,6 @@ p {
   background-image: var(--placeholder-fill-lg);
 }
 
-.ph__label {
-  position: absolute;
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted-hi);
-  background: rgba(20, 22, 26, 0.82);
-  border: 1px dashed var(--line-strong);
-  border-radius: var(--radius-block);
-  padding: 6px 10px;
-  margin: 0;
-}
-
-.ph__label--tr {
-  top: 20px;
-  right: 20px;
-  max-width: min(46%, 260px);
-}
-
-.ph__label--bl {
-  left: 8px;
-  bottom: 8px;
-  padding: 4px 7px;
-  font-size: 8px;
-}
-
 /* --- Landing: hero ------------------------------------------------------- */
 
 .hero {
@@ -1038,17 +1011,6 @@ a.platform-card__shot:hover {
   .hero__inner {
     padding-top: 64px;
     padding-bottom: 64px;
-  }
-
-  /* The badge must never crowd the copy column at narrow widths — but it has
-     to stay out of the flow to do it. `.hero` is a flex container, so a static
-     badge becomes a flex item and shoves the copy column sideways. */
-  .ph__label--tr {
-    top: 12px;
-    right: 12px;
-    max-width: 45%;
-    font-size: 8px;
-    padding: 5px 8px;
   }
 
   .aside {
